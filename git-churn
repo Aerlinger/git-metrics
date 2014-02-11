@@ -11,10 +11,7 @@ class GitChurn
   attr_accessor :all_files_with_churn_count, :changed_files, :result
 
   def calculate
-    get_all_files_with_churn_count
-    get_changed_files
-    filter_into_result
-    print_result
+    puts get_all_files_with_churn_count
   end
 
   private
