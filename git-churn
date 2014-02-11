@@ -38,7 +38,7 @@ class GitChurn
 
   def get_changed_files
     self.changed_files =
-      `git log origin/master..HEAD #{format_logs} | #{remove_blank_lines} | #{remove_duplicates}`.split("\n")
+      `git log master..HEAD #{format_logs} | #{remove_blank_lines} | #{remove_duplicates}`.split("\n")
   end
 
   def remove_duplicates
